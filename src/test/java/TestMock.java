@@ -22,12 +22,8 @@ public class TestMock {
     @Test
     void test(){
         when(engine.start()).thenReturn("Engine is damage");
-
         String result = car.drive();
         assertEquals("Engine is damage",result);
-
         verify(engine).start();
     }
-
-
 }
